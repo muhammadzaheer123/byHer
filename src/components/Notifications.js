@@ -27,6 +27,7 @@ import noti from '../images/noti1.png';
 
 
 import left from '../images/left-arrow-white.png';
+import Ripple from 'react-native-material-ripple';
 
 class App extends Component {
   constructor(props) {
@@ -118,7 +119,12 @@ class App extends Component {
            this.state.notification ?
                 <ScrollView>
                      <View style={{  alignItems: 'center' }}>
-              <TouchableOpacity  onPress={()=>this.props.navigation.navigate('NotificationsDetails')} style={{
+                     <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}  onPress={()=>this.props.navigation.navigate('NotificationsDetails')} style={{
                 width: '95%', borderWidth: 0, borderRadius: 10, height: 110, marginTop: 10, marginBottom:5, shadowColor: '#000',
                 shadowOffset: {
                   width: 0,
@@ -143,8 +149,13 @@ class App extends Component {
                   </View>
                   <Text style={{marginTop:6,fontWeight:'bold'}}>Great news, you have received an offer for a job. See the details...</Text>
                 </View>
-              </TouchableOpacity>
-              <TouchableOpacity  onPress={()=>this.props.navigation.navigate('NotificationsDetails')} style={{
+              </Ripple>
+              <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}  onPress={()=>this.props.navigation.navigate('NotificationsDetails')} style={{
                 width: '95%', borderWidth: 0, borderRadius: 10, height: 110,  marginTop: 5,marginBottom:5, shadowColor: '#000',
                 shadowOffset: {
                   width: 0,
@@ -169,8 +180,13 @@ class App extends Component {
                   </View>
                   <Text style={{marginTop:6,fontWeight:'bold'}}>Great news, you have received an offer for a job. See the details...</Text>
                 </View>
-              </TouchableOpacity>
-              <TouchableOpacity  onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
+              </Ripple>
+              <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}  onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
                 width: '95%', borderWidth: 0, borderRadius: 10, height: 110, marginTop: 5,marginBottom:5, shadowColor: '#000',
                 shadowOffset: {
                   width: 0,
@@ -195,8 +211,13 @@ class App extends Component {
                   </View>
                   <Text style={{marginTop:6,fontWeight:'bold'}}>Great news, you have received an offer for a job. See the details...</Text>
                 </View>
-              </TouchableOpacity>
-              <TouchableOpacity  onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
+              </Ripple>
+              <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true} onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
                 width: '95%', borderWidth: 0, borderRadius: 10, height: 110, marginTop: 5,marginBottom:5, shadowColor: '#000',
                 shadowOffset: {
                   width: 0,
@@ -221,9 +242,14 @@ class App extends Component {
                   </View>
                   <Text style={{marginTop:6,fontWeight:'bold'}}>Great news, you have received an offer for a job. See the details...</Text>
                 </View>
-              </TouchableOpacity>
+              </Ripple>
 
-              <TouchableOpacity  onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
+              <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}  onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
                 width: '95%', borderWidth: 0, borderRadius: 10, height: 110, marginTop: 5,marginBottom:5, shadowColor: '#000',
                 shadowOffset: {
                   width: 0,
@@ -248,9 +274,14 @@ class App extends Component {
                   </View>
                   <Text style={{marginTop:6,fontWeight:'bold'}}>Great news, you have received an offer for a job. See the details...</Text>
                 </View>
-              </TouchableOpacity>
+              </Ripple>
 
-              <TouchableOpacity  onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
+              <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}  onPress={()=>this.props.navigation.navigate('NotificationsDetails')}  style={{
                 width: '95%', borderWidth: 0, borderRadius: 10, height: 110, marginTop: 5,marginBottom:5, shadowColor: '#000',
                 shadowOffset: {
                   width: 0,
@@ -275,7 +306,7 @@ class App extends Component {
                   </View>
                   <Text style={{marginTop:6,fontWeight:'bold'}}>Great news, you have received an offer for a job. See the details...</Text>
                 </View>
-              </TouchableOpacity>       
+              </Ripple>       
             </View>
          
                 </ScrollView>

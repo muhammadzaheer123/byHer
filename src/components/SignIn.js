@@ -12,6 +12,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import left from '../images/left-arrow-white.png';
+import Ripple from 'react-native-material-ripple';
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -59,12 +60,19 @@ class Login extends Component {
           </TouchableOpacity>
           </View>
           <View style={{marginTop: '11%'}}>
-            <TouchableOpacity
+          <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+           style={styles.button}
+           rippleContainerBorderRadius={10}
               onPress={() => this.props.navigation.navigate('Home')}
-              style={styles.button}
+             
               >
               <Text style={styles.buttontext}>Login</Text>
-            </TouchableOpacity>
+            </Ripple>
           </View>
           <View style={{marginTop: '3%',flexDirection:'row',justifyContent:'center'}}>
           <Text style={styles.forgetpass1}>

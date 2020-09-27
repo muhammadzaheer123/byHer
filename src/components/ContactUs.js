@@ -14,6 +14,7 @@ import left from '../images/left-arrow-white.png';
 import logo from '../images/logo2.png';
 import phone from '../images/phone.png';
 import mail from '../images/mail.png';
+import Ripple from 'react-native-material-ripple';
 
 class ContactUs extends Component {
   constructor(props) {
@@ -50,15 +51,28 @@ class ContactUs extends Component {
           </View>
         <View style={{ marginTop: '15%', flexDirection:'row',justifyContent:'center' }}>
             <View style={{width:'40%',alignItems:'center'}}>
-            <TouchableOpacity  style={styles.button}>
+            <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            rippleContainerBorderRadius={200}
+              style={styles.button}>
               <Image source={phone} style={{width:25,height:25}}/>
-            </TouchableOpacity>
+            </Ripple>
             <Text style={{textAlign:'center'}}>Call Us</Text>
             </View>
             <View style={{width:'40%',alignItems:'center',}}>
-            <TouchableOpacity style={styles.button}>
+            <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true} 
+            rippleContainerBorderRadius={200}style={styles.button}>
               <Image source={mail} style={{width:25,height:25}}/>
-            </TouchableOpacity>
+            </Ripple>
             <Text style={{textAlign:'center'}}>Message Us</Text>
             </View>
           </View>

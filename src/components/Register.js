@@ -14,6 +14,7 @@ import eye from '../images/eye.png';
 import privatee from '../images/privatee.png';
 import data from '../images/data.png';
 import {RadioButton} from 'react-native-paper';
+import Ripple from 'react-native-material-ripple';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 class Login extends Component {
   constructor(props) {
@@ -160,8 +161,14 @@ class Login extends Component {
                 secureTextEntry={this.state.hidePassword}
                 style={styles.InputStyle}
               />
-              <TouchableOpacity
-                activeOpacity={0.8}
+                     <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+        
+           rippleContainerBorderRadius={50}
                 style={
                   this.state.hidePassword
                     ? styles.touachableButton2
@@ -176,7 +183,7 @@ class Login extends Component {
                       : styles.buttonImage3
                   }
                 />
-              </TouchableOpacity>
+              </Ripple>
             </View>
           </View>
           <View style={{marginTop: '2%'}}>
@@ -187,8 +194,15 @@ class Login extends Component {
                 secureTextEntry={this.state.hidePasswordB}
                 style={styles.InputStyle}
               />
-              <TouchableOpacity
-                activeOpacity={0.8}
+                <Ripple
+            rippleColor={'#dedede'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+        
+           rippleContainerBorderRadius={50}
+              
                 style={
                   this.state.hidePasswordB
                     ? styles.touachableButton2
@@ -203,15 +217,22 @@ class Login extends Component {
                       : styles.buttonImage3
                   }
                 />
-              </TouchableOpacity>
+              </Ripple>
             </View>
           </View>
           <View style={{marginTop: '3%'}}>
-            <TouchableOpacity
+          <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+           style={styles.button}
+           rippleContainerBorderRadius={10}
               onPress={() => this.props.navigation.navigate('Home')}
-              style={styles.button}>
+              >
               <Text style={styles.buttontext}>Register</Text>
-            </TouchableOpacity>
+            </Ripple>
           </View>
           <View
             style={{
@@ -330,16 +351,25 @@ const styles = StyleSheet.create({
   touachableButton2: {
     position: 'absolute',
     right: 3,
-    height: 65,
+    height: 30,
     width: 30,
     padding: 2,
+  
+    borderRadius:50,
+    top:10,
+    justifyContent:'center',
+    alignItems:'center'
   },
   touachableButton3: {
     position: 'absolute',
-    right: 10,
-    height: 55,
-    width: 26,
-    padding: 2,
+    right:3,
+    height: 30,
+    width: 30,
+    borderRadius:50,
+    top:10,
+   
+    justifyContent:'center',
+    alignItems:'center'
   },
   touachableButton4: {
     position: 'absolute',
@@ -354,9 +384,9 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   buttonImage3: {
-    resizeMode: 'contain',
-    height: '100%',
-    width: '100%',
+   
+    height: '80%',
+    width: '80%',
   },
 });
 

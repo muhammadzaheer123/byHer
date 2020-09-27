@@ -1,7 +1,7 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import React, {useState} from 'react';
+import React, {useState,useRef} from 'react';
 import {
   View,
   Text,
@@ -19,9 +19,16 @@ import ImagePicker from 'react-native-image-picker';
 import left from '../images/left-arrow-white.png';
 var screenWidth = Dimensions.get('window').width;
 import {TimePicker} from 'react-native-wheel-picker-android';
+import Ripple from 'react-native-material-ripple';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import moment from 'moment';
 var counter = 0;
 export default function Account(props) {
+  const inputRef1 = useRef(null);
+  const inputRef2 = useRef(null);
+  const inputRef3 = useRef(null);
+  const inputRef4 = useRef(null);
+  const inputRef5 = useRef(null);
   const [pickImage, setPickImage] = useState('');
   const [textInput1, setTextInput1] = useState(false);
   const [textInput2, setTextInput2] = useState(false);
@@ -59,7 +66,11 @@ export default function Account(props) {
     });
   };
   return (
-    <View style={styles.container}>
+    <KeyboardAwareScrollView
+      contentContainerStyle={{flexGrow: 1}}
+      automaticallyAdjustContentInsets={true}
+      style={styles.mainContainer}>
+   
       <View
         style={{
           backgroundColor: '#6c3694',
@@ -133,45 +144,69 @@ export default function Account(props) {
         <View>
           <View style={styles.textInput}>
             <TextInput
+            ref={inputRef1}
               value={textInputdata1}
               style={{flexGrow: 1, color: 'black'}}
               editable={textInput1}
               onChangeText={(text) => setTextInputdata1(text)}
             />
-            <TouchableOpacity onPress={() => setTextInput1(true)}>
+             <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            style={{height:30,width:30,borderRadius:50,justifyContent:'center',alignItems:'center'}}
+            rippleContainerBorderRadius={50} onPress={() => {setTextInput1(true);inputRef1.current.focus()}}>
               <Image
                 source={require('../images/pencil.png')}
                 style={{height: 17, width: 17}}
               />
-            </TouchableOpacity>
+            </Ripple>
           </View>
           <View style={[styles.textInput, {marginTop: 10}]}>
             <TextInput
+            ref={inputRef2}
               style={{flexGrow: 1, color: 'black'}}
               value={textInputdata2}
               editable={textInput2}
               onChangeText={(text) => setTextInputdata2(text)}
               keyboardType="numeric"
             />
-            <TouchableOpacity onPress={() => setTextInput2(true)}>
+            <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            style={{height:30,width:30,borderRadius:50,justifyContent:'center',alignItems:'center'}}
+            rippleContainerBorderRadius={50} onPress={() => {setTextInput2(true);inputRef2.current.focus()}}>
               <Image
                 source={require('../images/pencil.png')}
                 style={{height: 17, width: 17}}
               />
-            </TouchableOpacity>
+            </Ripple>
           </View>
           <View style={[styles.textInput, {marginTop: 10}]}>
             <TextInput
+             ref={inputRef3}
               style={{flexGrow: 1}}
               placeholder="Your address"
               editable={textInput3}
             />
-            <TouchableOpacity onPress={() => setTextInput3(true)}>
+           <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            style={{height:30,width:30,borderRadius:50,justifyContent:'center',alignItems:'center'}}
+            rippleContainerBorderRadius={50} onPress={() => {setTextInput3(true);inputRef3.current.focus()}}>
               <Image
                 source={require('../images/pencil.png')}
                 style={{height: 17, width: 17}}
               />
-            </TouchableOpacity>
+            </Ripple>
           </View>
           <View style={{width:'100%',marginTop:10}}>
           <Text
@@ -194,30 +229,46 @@ export default function Account(props) {
           </View>
           <View style={[styles.textInput, {marginTop: 10}]}>
             <TextInput
+             ref={inputRef4}
               style={{flexGrow: 1}}
               placeholder="Bank name"
               editable={textInput3}
             />
-            <TouchableOpacity onPress={() => setTextInput3(true)}>
+             <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            style={{height:30,width:30,borderRadius:50,justifyContent:'center',alignItems:'center'}}
+            rippleContainerBorderRadius={50} onPress={() => {setTextInput3(true);inputRef4.current.focus()}}>
               <Image
                 source={require('../images/pencil.png')}
                 style={{height: 17, width: 17}}
               />
-            </TouchableOpacity>
+            </Ripple>
           </View>
           <View style={[styles.textInput, {marginTop: 10}]}>
             <TextInput
+             ref={inputRef5}
               style={{flexGrow: 1}}
               placeholder="Account number"
               editable={textInput4}
               keyboardType="numeric"
             />
-            <TouchableOpacity onPress={() => setTextInput4(true)}>
+             <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            style={{height:30,width:30,borderRadius:50,justifyContent:'center',alignItems:'center'}}
+            rippleContainerBorderRadius={50} onPress={() => {setTextInput4(true);inputRef5.current.focus()}}>
               <Image
                 source={require('../images/pencil.png')}
                 style={{height: 17, width: 17}}
               />
-            </TouchableOpacity>
+            </Ripple>
           </View>
           <View
             style={{
@@ -280,7 +331,14 @@ export default function Account(props) {
             alignItems: 'center',
             marginTop: 30,
           }}>
-          <TouchableOpacity
+           <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+         
+           rippleContainerBorderRadius={5}
             style={{
               backgroundColor: '#e15301',
               borderRadius: 8,
@@ -299,10 +357,11 @@ export default function Account(props) {
             <Text style={{color: 'white', textAlign: 'center', fontSize: 16}}>
               Update
             </Text>
-          </TouchableOpacity>
+          </Ripple>
         </View>
       </View>
-    </View>
+   
+    </KeyboardAwareScrollView>
   );
 }
 const styles = StyleSheet.create({

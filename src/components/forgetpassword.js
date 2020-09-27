@@ -14,6 +14,7 @@ import {
 import left from '../images/left-arrow-white.png';
 import forgetpass from '../images/forgetpass.png';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import Ripple from 'react-native-material-ripple';
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -54,9 +55,15 @@ class Login extends Component {
             <TextInput placeholder="Type Your Email" style={styles.InputStyle} />
           </View>
           <View style={{ marginTop: '3%' }}>
-            <TouchableOpacity style={styles.button}>
+          <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            rippleContainerBorderRadius={5} style={styles.button}>
               <Text style={styles.buttontext}>SEND</Text>
-            </TouchableOpacity>
+            </Ripple>
           </View>
         </View>
       </View>

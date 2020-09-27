@@ -14,6 +14,7 @@ import {Switch} from 'react-native-paper';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+import Ripple from 'react-native-material-ripple';
 
 
 export default function Home({navigation}) {
@@ -58,7 +59,7 @@ export default function Home({navigation}) {
           }}>
           <Text
             style={{
-              fontSize: 18,
+              fontSize: 20,
               color: 'white',
               fontWeight: 'bold',
               marginLeft:5
@@ -67,7 +68,7 @@ export default function Home({navigation}) {
           </Text>
           <Text
             style={{
-              fontSize: 18,
+              fontSize: 20,
               fontWeight: 'bold',
               color: 'white',
               marginLeft:7
@@ -113,7 +114,14 @@ export default function Home({navigation}) {
             flexGrow: 1,
           
           }}>
-          <TouchableOpacity
+                  <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+         
+           rippleContainerBorderRadius={10}
             onPress={() => navigation.navigate('Jobs')}
             style={{
               alignItems: 'center',
@@ -136,8 +144,15 @@ export default function Home({navigation}) {
               }}>
               Jobs
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Ripple>
+          <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+         
+           rippleContainerBorderRadius={10}
             onPress={() => navigation.navigate('Earnings')}
             style={{
               alignItems: 'center',
@@ -160,8 +175,15 @@ export default function Home({navigation}) {
               }}>
               Earnings
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Ripple>
+          <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+         
+           rippleContainerBorderRadius={10}
             onPress={() => navigation.navigate('Account')}
             style={{
               alignItems: 'center',
@@ -184,14 +206,22 @@ export default function Home({navigation}) {
               }}>
               Account
             </Text>
-          </TouchableOpacity>
+          </Ripple>
 
       
-             <TouchableOpacity
+          <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+         
+           rippleContainerBorderRadius={10}
             onPress={() => navigation.navigate('History')}
             style={{
               alignItems: 'center',
               width:'19.5%',
+              
            
             
               
@@ -215,13 +245,21 @@ export default function Home({navigation}) {
               }}>
               History
             </Text>
-            </TouchableOpacity>
+            </Ripple>
         
-          <TouchableOpacity
+            <Ripple
+            rippleColor={'#bebebe'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+         
+           rippleContainerBorderRadius={10}
             onPress={() => navigation.navigate('Notifications')}
             style={{
               alignItems: 'center',
               width:'22%',
+          
            
             
            
@@ -244,7 +282,7 @@ export default function Home({navigation}) {
               }}>
               Notifications
             </Text>
-          </TouchableOpacity>
+          </Ripple>
         </View>
       </View>
       <View
@@ -265,7 +303,12 @@ export default function Home({navigation}) {
           style={{width: '100%'}}
         />
       </View>
-      <View style={{position:'absolute',width:'100%',backgroundColor:'#31bd7a',bottom:10,height:60}}>
+      <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}style={{position:'absolute',width:'100%',backgroundColor:'#31bd7a',bottom:10,height:60}}>
       <TouchableOpacity style={{marginLeft:30,marginRight:30,flexGrow:1,flexDirection:"row",justifyContent:'space-between',alignItems:'center'}}>
         <Image source={require('../images/right-arrow.png')} style={{width:25,height:25}} />
         <Text style={{fontSize:20,fontWeight:'bold',color:'white'}}>GO ONLINE</Text>
@@ -273,7 +316,7 @@ export default function Home({navigation}) {
 
       </TouchableOpacity>
 
-      </View>
+      </Ripple>
     </View>
   );
 }
@@ -332,6 +375,7 @@ const styles = StyleSheet.create({
     shadowOffset: {
       width: 0,
       height: 2,
+      
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
@@ -339,5 +383,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 50,
+    marginLeft:5
   },
 });

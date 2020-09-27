@@ -25,7 +25,7 @@ import {
 import refresh from '../images/refresh.png';
 import alarm from '../images/alarm.png';
 import noti from '../images/noti1.png';
-
+import Ripple from 'react-native-material-ripple';
 
 import left from '../images/left-arrow-white.png';
 
@@ -217,10 +217,13 @@ class App extends Component {
                 </View>
                 <View style={{alignItems:'center'}}>
                 <View style={{flexDirection:'row',marginTop:15,width:'100%',justifyContent:'space-evenly',marginLeft:10}}>
-                  <TouchableHighlight
-                    underlayColor={'#e15301'}
-                    onShowUnderlay={() => this.setSelected(true)}
-                    onHideUnderlay={() => this.setSelected(false)}
+                <Ripple
+            rippleColor={'#e15301'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            rippleContainerBorderRadius={5}
                    onPress={()=>this.setState({})} 
                    style={{height:40,width:125,flexDirection:'row',alignItems:'center',backgroundColor:!this.state.googlemap?'white':'#e15301',borderRadius:5,
                  shadowColor: '#000',
@@ -238,11 +241,14 @@ class App extends Component {
                     
                     </View>
 
-                  </TouchableHighlight>
-                  <TouchableHighlight 
-                   underlayColor={'#e15301'}
-                   onShowUnderlay={() => this.setSelectedRegister(true)}
-                   onHideUnderlay={() => this.setSelectedRegister(false)}
+                  </Ripple>
+                  <Ripple
+            rippleColor={'#e15301'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            rippleContainerBorderRadius={5}
                   onPress={()=>this.setState({})} 
                   style={{height:40,width:125,flexDirection:'row',alignItems:'center',backgroundColor:'white',borderRadius:5,
                  shadowColor: '#000',
@@ -259,7 +265,7 @@ class App extends Component {
                     <Text style={this.textStyleRegister()}>Waze App</Text>
                    
                     </View>
-                  </TouchableHighlight>
+                  </Ripple>
                
 
                 </View>
@@ -483,7 +489,13 @@ class App extends Component {
               flexDirection: 'row',
               justifyContent: 'center',
             }}>
-            <TouchableOpacity
+           <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            rippleContainerBorderRadius={5}
               style={{
                 backgroundColor: 'red',
                 borderRadius: 8,
@@ -503,8 +515,14 @@ class App extends Component {
               <Text style={{color: 'white', textAlign: 'center', fontSize: 16}}>
                 Decline
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
+            </Ripple>
+            <Ripple
+            rippleColor={'white'}
+            rippleOpacity={0.6}
+            rippleDuration={1000}
+            rippleFades={false}
+            rippleSequential={true}
+            rippleContainerBorderRadius={5}
               style={{
                 backgroundColor: 'green',
                 borderRadius: 8,
@@ -523,7 +541,7 @@ class App extends Component {
               <Text style={{color: 'white', textAlign: 'center', fontSize: 16}}>
                 Accept
               </Text>
-            </TouchableOpacity>
+            </Ripple>
           </View>
         </ScrollView>
       </View>
