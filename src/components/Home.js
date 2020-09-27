@@ -105,11 +105,11 @@ export default function Home({navigation}) {
         <View
           style={{
             flexDirection: 'row',
-            padding: 10,
+            padding: 5,
             
 
             marginBottom: 10,
-            
+            justifyContent:"space-between",
 
             flexGrow: 1,
           
@@ -125,8 +125,9 @@ export default function Home({navigation}) {
             onPress={() => navigation.navigate('Jobs')}
             style={{
               alignItems: 'center',
-              width:'19.5%',
-           
+              width:'19%',
+              // borderWidth:1,
+              justifyContent:'center'
              
             }}>
             <View style={styles.singleTab}>
@@ -138,9 +139,10 @@ export default function Home({navigation}) {
             <Text
               style={{
                 marginTop: 10,
-             
+                fontSize:12,
                 color: 'black',
                 opacity: 0.7,
+                textAlign:'center'
               }}>
               Jobs
             </Text>
@@ -156,8 +158,9 @@ export default function Home({navigation}) {
             onPress={() => navigation.navigate('Earnings')}
             style={{
               alignItems: 'center',
-              width:'19.5%',
-           
+              width:'19%',
+              // borderWidth:1,
+              justifyContent:'center'
              
             }}>
             <View style={styles.singleTab}>
@@ -169,9 +172,10 @@ export default function Home({navigation}) {
             <Text
               style={{
                 marginTop: 10,
-             
                 color: 'black',
                 opacity: 0.7,
+                fontSize:12,
+                textAlign:'center'
               }}>
               Earnings
             </Text>
@@ -187,8 +191,9 @@ export default function Home({navigation}) {
             onPress={() => navigation.navigate('Account')}
             style={{
               alignItems: 'center',
-              width:'19.5%',
-           
+              width:'19%',
+              // borderWidth:1,
+              justifyContent:'center'
              
             }}>
             <View style={styles.singleTab}>
@@ -200,9 +205,10 @@ export default function Home({navigation}) {
             <Text
               style={{
                 marginTop: 10,
-               
+                fontSize:12,
                 color: 'black',
                 opacity: 0.7,
+                textAlign:'center'
               }}>
               Account
             </Text>
@@ -220,8 +226,9 @@ export default function Home({navigation}) {
             onPress={() => navigation.navigate('History')}
             style={{
               alignItems: 'center',
-              width:'19.5%',
-              
+              width:'19%',
+              // borderWidth:1,
+              justifyContent:'center'
            
             
               
@@ -237,10 +244,10 @@ export default function Home({navigation}) {
                <Text
               style={{
                 marginTop: 10,
-              
+                fontSize:12,
                 color: 'black',
                 opacity: 0.7,
-              
+                textAlign:'center'
                 
               }}>
               History
@@ -258,9 +265,9 @@ export default function Home({navigation}) {
             onPress={() => navigation.navigate('Notifications')}
             style={{
               alignItems: 'center',
-              width:'22%',
-          
-           
+              width:'22.5%',
+              justifyContent:'center'
+              // borderWidth:1,
             
            
             }}>
@@ -274,10 +281,10 @@ export default function Home({navigation}) {
               style={{
                 marginTop: 10,
             
-               
+                fontSize:12,
                 color: 'black',
                 opacity: 0.7,
-             
+                textAlign:'center'
                 
               }}>
               Notifications
@@ -383,6 +390,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 50,
-    marginLeft:5
+    marginLeft:0
   },
 });

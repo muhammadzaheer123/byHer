@@ -108,7 +108,7 @@ export default function Account(props) {
           {/* <Image source={refresh} style={{ width: 25, height: 25 }} /> */}
         </View>
       </View>
-      <View style={styles.mainContainer}>
+      <View style={{padding:15}}>
         <View style={styles.imageContainer}>
           <View
             style={{borderWidth: 1, borderRadius: 50, borderColor: '#dedede'}}>
@@ -376,9 +376,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   mainContainer: {
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 20,
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 0,
   },
   imageContainer: {
     justifyContent: 'center',

@@ -91,7 +91,7 @@ class App extends Component {
             <Ripple
             rippleColor={'#e15301'}
             rippleOpacity={0.6}
-            rippleDuration={1000}
+            rippleDuration={200}
             rippleFades={false}
             rippleSequential={true}
             style={styles.button}
@@ -112,7 +112,7 @@ class App extends Component {
             <Ripple
             rippleColor={'#e15301'}
             rippleOpacity={0.6}
-            rippleDuration={1000}
+            rippleDuration={200}
             rippleFades={false}
             rippleSequential={true}
            style={styles.button}

@@ -63,7 +63,7 @@ class Login extends Component {
           <Ripple
             rippleColor={'white'}
             rippleOpacity={0.6}
-            rippleDuration={1000}
+            rippleDuration={500}
             rippleFades={false}
             rippleSequential={true}
            style={styles.button}
